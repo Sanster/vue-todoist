@@ -1,0 +1,96 @@
+$header-height: 43px;
+$logo-height: 25px;
+$logo-width: $logo-height;
+$left-menu-width: 250px;
+$left-menu-padding-left: 35px;
+$editor-width: 596px;
+
+body {
+	margin: 0;
+	background-color: #fafafa;
+}
+
+ul, menu, dir {
+    display: block;
+    list-style-type: disc;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 40px;
+}
+
+li {
+	text-align: left;
+}
+
+header {
+	height: $header-height;
+	background: #db4c3f;
+	
+	.container {
+		margin-left: 150px;
+		margin-right: 150px;
+		height: 100%;
+	}
+
+	#logo {
+		float: left;
+		margin-left: 35px;
+		margin-top: ($header-height - $logo-height) / 2;
+	}
+
+	.cmp_light_logo {
+		background: url(https://d3ptyyxy2at9ui.cloudfront.net/7fc6780f3629d6b0d39c231544137801.png) 0 0 no-repeat;
+		background-size: 197px,2782px;
+		background-position: 0 -1811px;
+		width: $logo-width;
+		height: $logo-height;
+	}
+}
+
+.holder {
+	max-width: 950px;
+	margin-left: 150px;
+	animation-name: fadeIn;
+	-webkit-animation-name: fadeIn;
+	animation-duration: 120ms;
+	-webkit-animation-duration: 120ms;
+}
+
+.left_menu {
+	float: left;
+	width: $left-menu-width;
+	background-color: #fafafa;
+	height: 400px;
+	padding-top: 7+$header-height;
+	position: fixed;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	padding-left: $left-menu-padding-left;
+	border-right: 1px solid #f1f1f1;
+}
+
+#main_content {
+	background-color: #fff;
+	border-right: 1px solid #f1f1f1;
+	margin-left: 19+$left-menu-width;
+	padding: 0 20px;
+
+	#editor {
+		width: $editor-width;
+		vertical-align: top;
+		padding-top: 80px!important;
+		padding-bottom: 75px!important;
+		padding: 6px 25px 12px 35px;
+
+		.current_project_editor {
+			margin-bottom: 38px;
+			padding-bottom: 2px;
+		}
+
+		.list_editor {
+
+		}
+	}
+}
