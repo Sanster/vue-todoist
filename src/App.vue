@@ -1,6 +1,6 @@
 <template>
   <div id="todoist">
-    <header>
+    <header id="top_bar">
       <div class="container">
         <div id="logo"><a href="#"><img src="https://d3ptyyxy2at9ui.cloudfront.net/76084e29cb2cf72b320e888edc583dfb.gif" width="30" height="30" class="cmp_light_logo"></a></div>
       </div>
@@ -37,7 +37,4 @@ export default {
 </script>
 
 <style>
-body {
-  font-family: Helvetica, sans-serif;
-}
 </style>

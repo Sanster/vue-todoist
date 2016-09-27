@@ -7,6 +7,7 @@
     					<box-filter :box-filter="boxFilter"></box-filter>
     				</li>
     			</ul>
+    			<left-menu-tabs></left-menu-tabs>
     		</div>
     	</div>
     </div>
@@ -14,6 +15,7 @@
 
 <script>
 import BoxFilter from "./box-filter.vue"
+import LeftMenuTabs from "./left-menu-tabs.vue"
 
 export default {
   	data () {
@@ -31,19 +33,38 @@ export default {
       			},
       			next7DayBox: {
       				logo: "https://d3ptyyxy2at9ui.cloudfront.net/76084e29cb2cf72b320e888edc583dfb.gif",
-      				text: "接下来 7 天",
+      				text: "接下来7天",
       				count: "5",
       			}
       		}
     	}
   	},
   	components: {
-  		BoxFilter
+  		BoxFilter,
+  		LeftMenuTabs
   	}
 }
 </script>
 
 <style lang="sass">
+#left_menu {
+    float: left;
+    width: 250px;
+    padding-left: 35px;
+    padding-top: 50px;
+    position: fixed;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    border-right: 1px solid #f1f1f1;
+    background-color: #fafafa;
+    -webkit-touch-callout: none !important;
+    -webkit-user-select: none !important;
+    -khtml-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+}
+
 #list_holder {
 	width: 230px;
 }
@@ -66,6 +87,14 @@ export default {
 		overflow: hidden;
 		-webkit-transition: color .1s ease-in,background-color .1s ease-in;
     	transition: color .1s ease-in,background-color .1s ease-in;
+	}
+
+	.counter {
+	    display: inline-block;
+	    color: #b3b3b3;
+	    margin: 5px;
+	    font-size: 11px;
+	    line-height: 15px;
 	}
 }
 </style>
