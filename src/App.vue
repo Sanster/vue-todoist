@@ -1,21 +1,11 @@
 <template>
   <div id="todoist">
-    <header id="top_bar">
-      <div class="container">
-        <div id="logo"><a href="#"><img src="https://d3ptyyxy2at9ui.cloudfront.net/76084e29cb2cf72b320e888edc583dfb.gif" width="30" height="30" class="cmp_light_logo"></a></div>
-      </div>
-    </header>
+    <top-bar></top-bar>
 
     <div class="holder">
       <left-menu></left-menu>
       <div id="main_content" class="main_content">
-        <div id="editor">
-          <div class="current_project_editor">
-            <div class="list_editor">
-              
-            </div>
-          </div>
-        </div>
+        <editor></editor>
       </div>
     </div>
   </div>
@@ -23,6 +13,8 @@
 
 <script>
 import LeftMenu from "./left-menu.vue"
+import TopBar from "./top-bar.vue"
+import Editor from "./editor.vue"
 
 export default {
   data () {
@@ -31,7 +23,9 @@ export default {
     }
   },
   components: {
-    LeftMenu
+    LeftMenu,
+    TopBar,
+    Editor
   }
 }
 </script>
