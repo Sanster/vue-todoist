@@ -4,7 +4,9 @@
       <div class="list_editor">
         <project-header></project-header>
         <ul class="items">
-          <li></li>
+          <li class="task_item" v-for="item in taskItems">
+            <task-item :text="item"></task-item>
+          </li>
         </ul>
       </div>
     </div>
@@ -13,15 +15,20 @@
 
 <script>
 import ProjectHeader from "./project-header.vue"
+import TaskItem from "./task-item.vue"
 
 export default {
   data () {
     return {
-      msg: 'Hello Vue 2.0!'
+      msg: 'Hello Vue 2.0!',
+      taskItems: [
+        1,2,3
+      ]
     }
   },
   components: {
-    ProjectHeader
+    ProjectHeader,
+    TaskItem
   }
 }
 </script>
