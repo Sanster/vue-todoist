@@ -1,7 +1,7 @@
 <template>
   <header id="top_bar">
     <div class="container">
-      <div id="logo"><a href="#"><img src="https://d3ptyyxy2at9ui.cloudfront.net/76084e29cb2cf72b320e888edc583dfb.gif" width="30" height="30" class="cmp_light_logo"></a></div>
+      <div id="logo"><a href="#"><img src="./assets/images/topbar-logo.gif" width="30" height="30" class="cmp_light_logo"></a></div>
     </div>
   </header>
 </template>
@@ -47,7 +47,7 @@ $logo-width: $logo-height;
   }
 
   .cmp_light_logo {
-    background: url(https://d3ptyyxy2at9ui.cloudfront.net/7fc6780f3629d6b0d39c231544137801.png) 0 0 no-repeat;
+    background: url('./assets/images/logo-background.png') 0 0 no-repeat;
     background-size: 197px,2782px;
     background-position: 0 -1811px;
     width: $logo-width;

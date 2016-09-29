@@ -22,18 +22,22 @@ module.exports = {
         loader: 'babel',
         exclude: /node_modules/
       },
-      {
-        test: /\.(png|jpg|gif|svg)$/,
-        loader: 'file',
-        query: {
-          name: '[name].[ext]?[hash]'
-        }
-      },
+      // {
+      //   test: /\.(png|jpg|gif|svg)$/,
+      //   loader: 'file',
+      //   query: {
+      //     name: '[name].[ext]?[hash]'
+      //   }
+      // },
       {
         test: /\.scss$/,
         loader: 'style!css!sass',
         // loader: ExtractTextPlugin.extract("style","css!sass")
       },
+      { 
+        test: /\.(png|jpg|jpeg|gif|woff)$/, 
+        loader: 'url?limit=10000&name=images/[name].[ext]?[hash]' 
+      }
     ]
   },
   devServer: {

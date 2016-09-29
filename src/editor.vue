@@ -2,18 +2,26 @@
   <div id="editor">
     <div class="current_project_editor">
       <div class="list_editor">
-        
+        <project-header></project-header>
+        <ul class="items">
+          <li></li>
+        </ul>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import ProjectHeader from "./project-header.vue"
+
 export default {
   data () {
     return {
       msg: 'Hello Vue 2.0!'
     }
+  },
+  components: {
+    ProjectHeader
   }
 }
 </script>

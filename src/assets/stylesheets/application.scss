@@ -43,3 +43,13 @@ td {
 	margin-left: 19+$left-menu-width;
 	padding: 0 20px;
 }
+
+.section_header {
+    margin: 0 0 0 0 !important;
+    padding: 0 0 6px 0 !important;
+	
+	&, &a{
+	    font-size: 20px !important;
+	    font-weight: normal;
+	}
+}
