@@ -4,6 +4,7 @@
     		<div id="top_section">
     			<top-filters></top-filters>
     			<left-menu-tabs></left-menu-tabs>
+          <project-list-holder></project-list-holder>
     		</div>
     	</div>
     </div>
@@ -12,6 +13,7 @@
 <script>
 import TopFilters from "./top-filters.vue"
 import LeftMenuTabs from "./left-menu-tabs.vue"
+import ProjectListHolder from "./project-list-holder.vue"
 
 export default {
   	data () {
@@ -21,7 +23,8 @@ export default {
   	},
   	components: {
   		TopFilters,
-  		LeftMenuTabs
+  		LeftMenuTabs,
+      ProjectListHolder
   	}
 }
 </script>

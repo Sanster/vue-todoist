@@ -4,7 +4,7 @@
     <tr>
       <td class="checker sel_checkbox_td">
         <div class="amicheckbox">
-          <img src="https://d3ptyyxy2at9ui.cloudfront.net/76084e29cb2cf72b320e888edc583dfb.gif" width="17" height="17" class="cmp_12_checkbox_off amicheckbox_img">
+          <img src="./assets/images/icon-src.gif" width="17" height="17" class="cmp_12_checkbox_off amicheckbox_img">
         </div>
       </td>
       <td class="text_cursor content task_content_item">
@@ -14,7 +14,7 @@
         <span class="text sel_item_content">
           {{text}}
           <span class="clickable note_icon note_icon_hidden" data-note-type="item_note" data-note-parent-id="50724437">
-            <img src="https://d3ptyyxy2at9ui.cloudfront.net/76084e29cb2cf72b320e888edc583dfb.gif" width="15" height="14" class="cmp_comment clickable sel_item_notes">
+            <img src="./assets/images/icon-src.gif" width="15" height="14" class="cmp_comment clickable sel_item_notes">
           </span>
         </span>
       </td>
@@ -60,10 +60,5 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.task_item td {
-  padding-top: 13px;
-  padding-bottom: 13px;
 }
 </style>

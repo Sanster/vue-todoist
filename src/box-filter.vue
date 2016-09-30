@@ -20,28 +20,4 @@ export default {
   width: 20px;
   height: 18px;
 }
-
-.cmp_filter_inbox {
-  background: url('./assets/images/logo-background.png') 0 0 no-repeat;
-  background-size: 197px,2782px;
-  background-position: 0 -1465px;
-  width: 20px;
-  height: 18px;
-}
-
-.cmp_filter_today {
-  background: url('./assets/images/logo-background.png') 0 0 no-repeat;
-  background-size: 197px,2782px;
-  background-position: 0 -1393px;
-  width: 20px;
-  height: 18px;
-}
-
-.cmp_filter_days {
-  background: url('./assets/images/logo-background.png') 0 0 no-repeat;
-  background-size: 197px,2782px;
-  background-position: 0 -1483px;
-  width: 20px;
-  height: 18px;
-}
 </style>

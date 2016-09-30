@@ -45,13 +45,5 @@ $logo-width: $logo-height;
     margin-left: 35px;
     margin-top: ($header-height - $logo-height) / 2;
   }
-
-  .cmp_light_logo {
-    background: url('./assets/images/logo-background.png') 0 0 no-repeat;
-    background-size: 197px,2782px;
-    background-position: 0 -1811px;
-    width: $logo-width;
-    height: $logo-height;
-  }
 }
 </style>

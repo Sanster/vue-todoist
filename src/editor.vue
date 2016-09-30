@@ -52,12 +52,6 @@ $editor-width: 596px;
 
   }
 
-  .items {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-  }
-
   .task_item td {
     padding-top: 13px;
     padding-bottom: 13px;

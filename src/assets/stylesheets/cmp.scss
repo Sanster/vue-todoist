@@ -1,0 +1,33 @@
+$background-img: '../images/logo-background.png';
+
+.cmp_filter_inbox {
+  background: url($background-img) 0 0 no-repeat;
+  background-size: 197px,2782px;
+  background-position: 0 -1465px;
+  width: 20px;
+  height: 18px;
+}
+
+.cmp_filter_today {
+  background: url($background-img) 0 0 no-repeat;
+  background-size: 197px,2782px;
+  background-position: 0 -1393px;
+  width: 20px;
+  height: 18px;
+}
+
+.cmp_filter_days {
+  background: url($background-img) 0 0 no-repeat;
+  background-size: 197px,2782px;
+  background-position: 0 -1483px;
+  width: 20px;
+  height: 18px;
+}
+
+.cmp_light_logo {
+  background: url($background-img) 0 0 no-repeat;
+  background-size: 197px,2782px;
+  background-position: 0 -1811px;
+  width: 25px;
+  height: 25px;
+}
