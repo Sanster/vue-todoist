@@ -61,4 +61,9 @@ export default {
   align-items: center;
   justify-content: center;
 }
+
+.task_item td {
+  padding-top: 13px;
+  padding-bottom: 13px;
+}
 </style>

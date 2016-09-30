@@ -2,54 +2,59 @@ $left-menu-width: 250px;
 $left-menu-padding-left: 35px;
 
 body {
-	margin: 0;
-	background-color: #fafafa;
+  margin: 0;
+  background-color: #fafafa;
 }
 
 ul, menu, dir {
-    display: block;
-    list-style-type: disc;
-    -webkit-margin-before: 1em;
-    -webkit-margin-after: 1em;
-    -webkit-margin-start: 0px;
-    -webkit-margin-end: 0px;
-    -webkit-padding-start: 40px;
+  display: block;
+  list-style-type: disc;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-start: 40px;
 }
 
 li {
-	text-align: left;
+  text-align: left;
 }
 
 table{
-    border-collapse: collapse;
+  border-collapse: collapse;
 }
 
 td {
-    vertical-align: top;
+  vertical-align: top;
+}
+
+img {
+  border: 0;
+  vertical-align: middle;
 }
 
 .holder {
-	max-width: 950px;
-	margin-left: 150px;
-	animation-name: fadeIn;
-	-webkit-animation-name: fadeIn;
-	animation-duration: 120ms;
-	-webkit-animation-duration: 120ms;
+  max-width: 950px;
+  margin-left: 150px;
+  animation-name: fadeIn;
+  -webkit-animation-name: fadeIn;
+  animation-duration: 120ms;
+  -webkit-animation-duration: 120ms;
 }
 
 #main_content {
-	background-color: #fff;
-	border-right: 1px solid #f1f1f1;
-	margin-left: 19+$left-menu-width;
-	padding: 0 20px;
+  background-color: #fff;
+  border-right: 1px solid #f1f1f1;
+  margin-left: 19+$left-menu-width;
+  padding: 0 20px;
 }
 
 .section_header {
     margin: 0 0 0 0 !important;
     padding: 0 0 6px 0 !important;
-	
-	&, &a{
-	    font-size: 20px !important;
-	    font-weight: normal;
-	}
+  
+  &, &a{
+      font-size: 20px !important;
+      font-weight: normal;
+  }
 }
