@@ -38,5 +38,27 @@ export default {
 </script>
 
 <style lang="sass">
+.checker{
+  padding-top: 14px;
+  padding-right: 10px;
+}
 
+.amicheckbox {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  text-align: center;
+  line-height: 15px;
+  border: 1px solid #c9c9c9;
+  border-radius: 15px;
+  transition: background 150ms ease-in;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 </style>

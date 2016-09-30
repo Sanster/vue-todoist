@@ -51,5 +51,11 @@ $editor-width: 596px;
   .list_editor {
 
   }
+
+  .items {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
 }
 </style>
