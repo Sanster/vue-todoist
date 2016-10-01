@@ -1,8 +1,6 @@
 <template>
   <ul id="top_filters">
-    <li class="filter" v-for="boxFilter in boxFilters">
-      <box-filter :box-filter="boxFilter"></box-filter>
-    </li>
+    <box-filter v-for="boxFilter in boxFilters" :box-filter="boxFilter"></box-filter>
   </ul>
 </template>
 

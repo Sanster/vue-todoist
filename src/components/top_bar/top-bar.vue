@@ -1,7 +1,7 @@
 <template>
   <header id="top_bar">
     <div class="container">
-      <div id="logo"><a href="#"><img src="./assets/images/icon-src.gif" width="30" height="30" class="cmp_light_logo"></a></div>
+      <div id="logo"><a href="#"><img src="../../assets/images/icon-src.gif" width="30" height="30" class="cmp_light_logo"></a></div>
     </div>
   </header>
 </template>

@@ -1,11 +1,27 @@
+@import 'cmp.scss';
 @import 'generic-left-list.scss';
+@import 'icon.scss';
+@import 'button.scss';
 
 $left-menu-width: 250px;
 $left-menu-padding-left: 35px;
 
 body {
-  margin: 0;
+  margin: auto;
+  margin-left: 0;
+  color: #202020;
   background-color: #fafafa;
+  font-family: "Open Sans","Helvetica",Arial,sans-serif;
+  font-size: 13px;
+  padding: 0 !important;
+  margin-bottom: 0 !important;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 ul, menu, dir {
@@ -94,26 +110,14 @@ td.menu {
   padding-left: 5px !important;
 }
 
+a.action:hover {
+  text-decoration: underline
+}
+
 .counter_color {
   display: inline-block;
   vertical-align: middle;
   font-size: 16px;
-}
-
-.icon-project:before {
-  content: "c";
-}
-
-[class^="icon-"]:before, [class*=" icon-"]:before {
-  font-family: "fontist" !important;
-  font-style: normal !important;
-  font-weight: normal !important;
-  font-variant: normal !important;
-  text-transform: none !important;
-  speak: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 .current {
@@ -162,3 +166,77 @@ td.menu {
   }
 }
 
+.form_content {
+  padding: 0;
+  width: 100%;
+}
+
+.text_box_holder {
+  width: 100%;
+  border-right: 1px solid #eee;
+  background-color: white !important;
+}
+
+.richtext_editor {
+  padding-bottom: 4px !important;
+  height: auto !important;
+  line-height: 19px;
+  -webkit-touch-callout: text !important;
+  -webkit-user-select: text !important;
+  -khtml-user-select: text !important;
+  -moz-user-select: text !important;
+  -ms-user-select: text !important;
+  user-select: text !important;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  -webkit-animation-duration: 80ms;
+  animation-duration: 80ms;
+}
+
+textarea, .text_box, .input_due_date, .richtext_editor {
+  resize: none;
+  padding: 6px 6px 0 6px;
+  outline: 0;
+  min-height: 20px;
+}
+
+.text_box, .richtext_editor {
+  border: 0;
+  width: 95%;
+  padding: 0 6px;
+  padding-top: 4px;
+}
+
+textarea, input, .richtext_editor {
+  font-family: "Open Sans","Helvetica",Arial,sans-serif;
+  font-size: 13px;
+}
+
+.indent_arrows {
+  padding-right: 2px;
+  padding-left: 2px;
+  text-align: center;
+}
+
+li.manager {
+  .td_submit {
+    width: 0 !important;
+    white-space: nowrap;
+    padding-right: 25px !important;
+  }
+
+  .submit_btn {
+    margin-right: 5px;
+  }
+}
+
+.manager .submit_btn {
+  margin-top: 5px;
+}
+
+.td_extra {
+  width: 100% !important;
+}

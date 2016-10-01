@@ -3,7 +3,7 @@
     <ul id="project_list" class="items generic_left_list">
       <li :class="'clickable menu_clickable indent_' + project.indent" v-for="project in projects">
         <div class="arrow" v-if="project.indent == 1" @click="arrowClicked(project, $event)">
-          <img src="./assets/images/icon-src.gif" width="10" height="10" :class="project.expend ? 'cmp_open_arrow_down' : 'cmp_open_arrow_right'">
+          <img src="../../assets/images/icon-src.gif" width="10" height="10" :class="project.expend ? 'cmp_open_arrow_down' : 'cmp_open_arrow_right'">
         </div>
         <table cellpadding="0" cellspacing="0" class="item_table">
           <tbody>
@@ -24,12 +24,19 @@
           </tbody>
         </table>
       </li>
+      <new-project v-if="addNewProject" v-on:cancel="cancel"></new-project>
     </ul>
   </div>
 </template>
 
 <script>
+import NewProject from "./new-project.vue"
+
 export default {
+  props: ["addNewProject"],
+  components: {
+    NewProject
+  },
   data () {
     return {
       projects: [
@@ -54,6 +61,17 @@ export default {
           count: 5,
           indent: 1,
           expend: true,
+        },
+        {
+          title: "youtube",
+          count: 5,
+          indent: 2,
+        },
+        {
+          title: "todo",
+          count: 5,
+          indent: 1,
+          expend: true,
         }
       ]
     }
@@ -73,6 +91,9 @@ export default {
           break;
         }
       }
+    },
+    cancel: function () {
+      this.$emit('cancel');
     }
   }
 }

@@ -55,3 +55,19 @@ $background-img: '../images/logo-background.png';
   width: 22px;
   height: 18px;
 }
+
+.cmp_indent_right {
+  background: url($background-img) 0 0 no-repeat;
+  background-size: 197px,2782px;
+  background-position: 0 -357px;
+  width: 14px;
+  height: 14px;
+}
+
+.cmp_indent_left {
+  background: url($background-img) 0 0 no-repeat;
+  background-size: 197px,2782px;
+  background-position: 0 -217px;
+  width: 14px;
+  height: 14px;
+}

@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <img src="./assets/images/icon-src.gif" :class="'cmp_filter_' + boxFilter.name" width="20" height="18">{{boxFilter.text}}<span class="counter">{{boxFilter.count}}</span>
-  <div>
+  <li class="filter">
+    <img src="../../assets/images/icon-src.gif" :class="'cmp_filter_' + boxFilter.name" width="20" height="18">{{boxFilter.text}}<span class="counter">{{boxFilter.count}}</span>
+  </li>
 </template>
 
 <script>

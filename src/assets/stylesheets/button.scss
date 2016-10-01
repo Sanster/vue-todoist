@@ -1,0 +1,39 @@
+.amibutton {
+  font-weight: bold;
+  font-size: 12px !important;
+  line-height: 17px;
+  display: inline-block;
+  text-decoration: none;
+  padding: 6px 12px 7px 12px;
+  position: relative;
+  display: inline-block;
+  text-shadow: 0 1px 0 #fff;
+  background: #f3f3f3;
+  white-space: nowrap;
+  border: solid 1px #dcdcdc;
+  background: -webkit-gradient(linear,0 40%,0 70%,from(#f5f5f5),to(#f1f1f1));
+  background: -moz-linear-gradient(linear,0 40%,0 70%,from(#f5f5f5),to(#f1f1f1));
+  border-radius: 2px !important;
+}
+
+.amibutton, .amibutton:visited {
+  color: #6e6e6e !important;
+  text-decoration: none !important;
+}
+
+.amibutton_red, .amibutton_red:visited {
+  background: 0;
+  background-color: #db4c3f;
+  color: white !important;
+  text-shadow: none;
+  border: 1px solid transparent;
+}
+
+.cancel, .cancel_link {
+  color: #555;
+  cursor: pointer;
+  font-size: 12px;
+  padding: 2px 5px;
+  text-decoration: none;
+  white-space: nowrap;
+}

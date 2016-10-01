@@ -5,13 +5,13 @@
     </a>
     <div class="right_task_actions">
       <span class="clickable note_icon" data-note-type="project_note" data-note-parent-id="179486867">
-        <img src="https://d3ptyyxy2at9ui.cloudfront.net/76084e29cb2cf72b320e888edc583dfb.gif" width="15" height="14" class="cmp_comment clickable">
+        <img src="../../assets/images/icon-src.gif" width="15" height="14" class="cmp_comment clickable">
       </span>
       <a href="#">
-        <img src="https://d3ptyyxy2at9ui.cloudfront.net/76084e29cb2cf72b320e888edc583dfb.gif" width="26" height="16" class="cmp_share_project_plus">
+        <img src="../../assets/images/icon-src.gif" width="26" height="16" class="cmp_share_project_plus">
       </a>
       <a href="#">
-        <img src="https://d3ptyyxy2at9ui.cloudfront.net/76084e29cb2cf72b320e888edc583dfb.gif" width="16" height="16" class="cmp_task_actions icon">
+        <img src="../../assets/images/icon-src.gif" width="16" height="16" class="cmp_task_actions icon">
       </a>
     </div>
   </h2>

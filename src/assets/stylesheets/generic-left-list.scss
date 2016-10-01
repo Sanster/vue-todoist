@@ -48,4 +48,31 @@
   .indent_2 {
     padding-left: 22px !important;
   }
+
+  li.manager table td {
+    padding: 0;
+  }
+
+  .text_box_holder .counter_color {
+    margin-top: 6px;
+  }
+
+  .text_box_holder .div_color {
+    cursor: pointer;
+    padding-right: 8px;
+    padding-bottom: 8px;
+    float: left !important;
+    position: absolute;
+    margin-left: 3px;
+  }
+  
+  .richtext_editor {
+    margin-left: 22px;
+    width: 141px;
+  }
+
+  .form_content .richtext_editor {
+    font-size: 14px;
+    min-height: 21px;
+  }
 }

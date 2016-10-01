@@ -12,9 +12,9 @@
 </template>
 
 <script>
-import LeftMenu from "./left-menu.vue"
-import TopBar from "./top-bar.vue"
-import Editor from "./editor.vue"
+import LeftMenu from "./components/left_menu/left-menu.vue"
+import TopBar from "./components/top_bar/top-bar.vue"
+import Editor from "./components/editor/editor.vue"
 
 export default {
   data () {
