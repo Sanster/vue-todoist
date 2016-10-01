@@ -43,7 +43,11 @@ export default {
     padding: 0;
     padding-top: 24px;
     margin-bottom: 21px;
-
+  
+    li:hover {
+      background-color: #fff
+    }
+    
     .filter {
       font-size: 14px;
       color: #303333;

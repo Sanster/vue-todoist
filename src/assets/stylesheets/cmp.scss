@@ -31,3 +31,27 @@ $background-img: '../images/logo-background.png';
   width: 25px;
   height: 25px;
 }
+
+.cmp_open_arrow_down {
+  background: url($background-img) 0 0 no-repeat;
+  background-size: 197px,2782px;
+  background-position: 0 -64px;
+  width: 10px;
+  height: 10px;
+}
+
+.cmp_open_arrow_right {
+  background: url($background-img) 0 0 no-repeat;
+  background-size: 197px,2782px;
+  background-position: 0 -84px;
+  width: 10px;
+  height: 10px;
+}
+
+.cmp_menu_on {
+  background: url($background-img) 0 0 no-repeat;
+  background-size: 197px,2782px;
+  background-position: 0 -1519px;
+  width: 22px;
+  height: 18px;
+}

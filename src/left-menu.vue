@@ -4,8 +4,8 @@
     		<div id="top_section">
     			<top-filters></top-filters>
     			<left-menu-tabs></left-menu-tabs>
-          <project-list-holder></project-list-holder>
     		</div>
+        <project-list-holder></project-list-holder>
     	</div>
     </div>
 </template>
@@ -31,24 +31,35 @@ export default {
 
 <style lang="sass">
 #left_menu {
-    float: left;
-    width: 250px;
-    padding-left: 35px;
-    padding-top: 50px;
-    position: fixed;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    border-right: 1px solid #f1f1f1;
-    background-color: #fafafa;
-    -webkit-touch-callout: none !important;
-    -webkit-user-select: none !important;
-    -khtml-user-select: none !important;
-    -moz-user-select: none !important;
-    -ms-user-select: none !important;
-    user-select: none !important;
+  float: left;
+  width: 250px;
+  padding-left: 35px;
+  padding-top: 50px;
+  position: fixed;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  border-right: 1px solid #f1f1f1;
+  background-color: #fafafa;
+  -webkit-touch-callout: none !important;
+  -webkit-user-select: none !important;
+  -khtml-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+
+  .items li:hover table {
+    background-color: #fff;
+    border-radius: 2px
+  }
 }
 
 #list_holder {
 	width: 230px;
+}
+
+li.current table {
+  background: #fff;
+  border-radius: 2px;
+  font-weight: bold;
 }
 </style>
