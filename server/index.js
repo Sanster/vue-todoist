@@ -4,12 +4,16 @@ import send from 'koa-send';
 import Koa from 'koa';
 import Router from 'koa-router';
 import serve from 'koa-static';
-import mount from 'koa-mount';
+import conditional from 'koa-conditional-get';
+import etag from 'koa-etag';
 
 var app = new Koa();
 var router = Router();
 
 var serve_opts =  { maxage: 24 * 60 * 60 * 1000 };
+
+app.use(conditional());
+app.use(etag());
 
 app.use(serve('./public', serve_opts));
 
