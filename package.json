@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "index": "cp ./client/index.html ./public",
-    "dev": "npm run index && cross-env NODE_ENV=development webpack-dev-server --inline --hot",
+    "dev": "npm run index && cross-env NODE_ENV=development webpack-dev-server --inline --hot --content-base public/",
     "build": "npm run index && cross-env NODE_ENV=production webpack --progress --hide-modules",
     "start": "npm run build && node --harmony app.js"
   },
