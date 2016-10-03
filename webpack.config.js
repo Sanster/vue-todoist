@@ -2,10 +2,10 @@ var path = require('path')
 var webpack = require('webpack')
 
 module.exports = {
-  entry: './src/main.js',
+  entry: './client/main.js',
   output: {
-    path: path.resolve(__dirname, './dist'),
-    publicPath: '/dist/',
+    path: path.resolve(__dirname, './public'),
+    publicPath: '/',
     filename: 'build.js'
   },
   resolveLoader: {
@@ -35,8 +35,12 @@ module.exports = {
         // loader: ExtractTextPlugin.extract("style","css!sass")
       },
       { 
-        test: /\.(png|jpg|jpeg|gif|woff)$/, 
-        loader: 'url?limit=10000&name=images/[name].[ext]?[hash]' 
+        test: /\.(png|jpg|jpeg|gif)$/, 
+        loader: 'url?limit=10000&name=[name].[ext]' 
+      },
+      { 
+        test: /\.woff$/, 
+        loader: 'url?limit=10000&name=[name].[ext]' 
       }
     ]
   },
