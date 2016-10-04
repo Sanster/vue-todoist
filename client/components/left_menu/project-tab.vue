@@ -1,7 +1,7 @@
 <template>
   <div id="project_list_holder">
     <ul id="project_list" class="items generic_left_list">
-      <li :class="'clickable menu_clickable indent_' + project.indent" v-for="project in projects">
+      <li :class="'clickable menu_clickable indent_' + project.indent" v-for="project in projects" @click="showProject(project)">
         <div class="arrow" v-if="project.indent == 1" @click="arrowClicked(project, $event)">
           <img src="../../assets/images/icon-src.gif" width="10" height="10" :class="project.expend ? 'cmp_open_arrow_down' : 'cmp_open_arrow_right'">
         </div>
@@ -89,10 +89,10 @@ export default {
       project.expend = !project.expend;
 
       //hide all indented li
-      let li = event.target.closest('li')
+      let li = event.target.closest('li');
       while(true){
-        let nextLi = li.nextSibling
-        if(!nextLi.classList.contains("indent_1")){
+        let nextLi = li.nextSibling;
+        if( nextLi && !nextLi.classList.contains("indent_1")){
           nextLi.style.display = project.expend ? "" : "none";
           li = nextLi;
         }else{
@@ -117,6 +117,9 @@ export default {
     },
     showAddProject: function() {
       this.showAddNewProject = true;
+    },
+    showProject (project) {
+      this.$store.commit('setCurrentProject', project);
     },
   }
 }

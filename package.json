@@ -21,7 +21,8 @@
     "koa-send": "^3.2.0",
     "koa-static": "^3.0.0",
     "vue": "^2.0.0",
-    "vue-router": "^2.0.0"
+    "vue-router": "^2.0.0",
+    "vuex": "^2.0.0"
   },
   "devDependencies": {
     "babel-core": "^6.0.0",
