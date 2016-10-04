@@ -3,45 +3,56 @@
     	<div id="list_holder">
     		<div id="top_section">
     			<top-filters></top-filters>
-    			<left-menu-tabs></left-menu-tabs>
-    		</div>
-        <project-list-holder :addNewProject="addNewProject" v-on:cancel="cancelAddNewProject"></project-list-holder>
-        
-        <div id="project_list_man" class="left_list_man_holder">
-          <div class="left_list_man actions" v-if="!addNewProject">
-            <a href="" class="action sel_add_project" @click.prevent="addProject">
-              <span class="icon icon-add"></span>添加项目
-            </a>
+          <div id="left_menu_tabs" v-bind:class="currentTab">
+            <table>
+              <tbody>
+                <tr>
+                  <td @click="onProjectsTab" class="control projects sel_projects" width="33%">项目</td>
+                  <td @click="onLabelsTab" class="control labels" width="33%">标签</td>
+                  <td @click="onFiltersTab" class="control filters" width="33%">过滤器</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
-        </div>
+    		</div>
+        <project-tab v-show="currentTab == 'show_projects'"></project-tab>
+        <label-tab v-show="currentTab == 'show_labels'"></label-tab>
+        <filter-tab v-show="currentTab == 'show_filters'"></filter-tab>
     	</div>
     </div>
 </template>
 
 <script>
 import TopFilters from "./top-filters.vue"
-import LeftMenuTabs from "./left-menu-tabs.vue"
-import ProjectListHolder from "./project-list-holder.vue"
+import ProjectTab from "./project-tab.vue"
+import LabelTab from "./label-tab.vue"
+import FilterTab from "./filter-tab.vue"
 
 export default {
   	data () {
     	return {
-      	msg: "",
-        addNewProject: false
+      	currentTab: "show_projects"
     	}
   	},
   	components: {
   		TopFilters,
-  		LeftMenuTabs,
-      ProjectListHolder,
+      ProjectTab,
+      LabelTab,
+      FilterTab
   	},
     methods: {
-      addProject: function() {
-        this.addNewProject = true;
+      onTab: function(e){
+        this.currentTab = "show_" + e.target.classList[1]
       },
-      cancelAddNewProject: function() {
-        this.addNewProject = false;
-      }
+      onProjectsTab: function(e) {
+        this.onTab(e);
+      },
+      onLabelsTab: function(e) {
+        this.onTab(e);
+      },
+      onFiltersTab: function(e) {
+        this.onTab(e);
+      },
     }
 }
 </script>
@@ -118,6 +129,39 @@ a.action {
   .icon-add {
     margin-right: 14px;
     margin-left: 9px;
+  }
+}
+
+#left_menu_tabs {
+  margin-top: 25px;
+  margin-bottom: 20px;
+  white-space: nowrap;
+
+  table {
+    width: 100%;
+  }
+
+  .control {
+    cursor: pointer;
+    font-size: 13px;
+    line-height: 1;
+    padding: 0 5px 5px 2px;
+    text-align: center;
+    color: #9a9a9a;
+    -webkit-transition: color .1s ease-in;
+    transition: color .1s ease-in;
+  }
+
+  &.show_projects .projects, 
+  &.show_labels .labels, 
+  &.show_filters .filters {
+      border-bottom: solid 1px #737373 !important;
+      font-weight: bold;
+      color: #5c5c5c !important;
+  }
+  
+  td {
+    border-bottom: 1px solid #e0e0e0;
   }
 }
 </style>

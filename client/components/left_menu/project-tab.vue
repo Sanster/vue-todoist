@@ -24,7 +24,15 @@
           </tbody>
         </table>
       </li>
-      <new-project v-if="addNewProject" v-on:cancel="cancel"></new-project>
+      <new-project v-if="showAddNewProject" v-on:cancel="cancel" v-on:createNewProject="createNewProject"></new-project>
+
+      <div id="project_list_man" class="left_list_man_holder">
+        <div class="left_list_man actions" v-if="!showAddNewProject">
+          <a href="" class="action sel_add_project" @click.prevent="showAddProject">
+            <span class="icon icon-add"></span>添加项目
+          </a>
+        </div>
+      </div>
     </ul>
   </div>
 </template>
@@ -33,12 +41,12 @@
 import NewProject from "./new-project.vue"
 
 export default {
-  props: ["addNewProject"],
   components: {
     NewProject
   },
   data () {
     return {
+      showAddNewProject: false,
       projects: [
         {
           title: "学习",
@@ -93,8 +101,23 @@ export default {
       }
     },
     cancel: function () {
-      this.$emit('cancel');
-    }
+      this.showAddNewProject = false;
+    },
+    createNewProject: function (projectName) {
+      this.projects.push(
+        {
+          title: projectName,
+          count: 0,
+          indent: 1,
+          expend: true,
+        }
+      )
+
+      this.showAddNewProject = false;
+    },
+    showAddProject: function() {
+      this.showAddNewProject = true;
+    },
   }
 }
 </script>

@@ -10,7 +10,7 @@
                   <tr>
                     <td class="text_box_holder">
                       <div class="div_color counter_color icon-project menu_icon" id="color_selector" style="color: rgb(204, 204, 204);"></div>
-                      <div tabindex="1" autocomplete="off" withplaceholders="undefined" class="richtext_editor sel_richtext_editor" contenteditable="true"></div>
+                      <div ref="newProjectName" tabindex="1" autocomplete="off" withplaceholders="undefined" class="richtext_editor sel_richtext_editor" contenteditable="true" style="display: inline-block;" @keydown.enter.prevent="newProject($event)"></div>
                     </td>
                   </tr>
                 </tbody>
@@ -31,7 +31,7 @@
         <tbody>
           <tr>
             <td align="left" class="td_submit">
-              <a href="#" class="amibutton amibutton_red submit_btn"><span>添加项目</span></a>
+              <a href="#" class="amibutton amibutton_red submit_btn" @click.prevent="newProject($event)"><span>添加项目</span></a>
               <a class="cancel" href="" tabindex="4" @click.prevent="cancel">取消</a>
             </td>
             <td align="right" class="td_extra"></td>
@@ -44,6 +44,9 @@
 
 <script>
 export default {
+  mounted: function () {
+    this.$refs.newProjectName.focus();
+  },
   data () {
     return {
       title: 'Hello Vue 2.0!'
@@ -52,6 +55,12 @@ export default {
   methods: {
     cancel: function () {
       this.$emit('cancel');
+    },
+    newProject: function(event) {
+      let editor = this.$refs.newProjectName;
+      let projectName = editor.textContent;
+      editor.textContent="";
+      this.$emit('createNewProject', projectName);
     }
   }
 }
