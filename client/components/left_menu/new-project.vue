@@ -67,5 +67,18 @@ export default {
 </script>
 
 <style lang="sass">
+li.manager {
+  padding: 8px 0 !important;
+  background: none !important;
+  margin-bottom: 6px;
 
+  form {
+    padding: 0;
+    margin: 0;
+  }
+
+  table {
+    background: none !important;
+  }
+}
 </style>

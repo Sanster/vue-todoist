@@ -161,14 +161,30 @@ a.action:hover {
     padding: 0 0 6px 0 !important;
   
   &, &a{
-      font-size: 20px !important;
-      font-weight: normal;
+    font-size: 20px !important;
+    font-weight: normal;
   }
 }
 
 .form_content {
   padding: 0;
   width: 100%;
+  height: 39px;
+  
+  table {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-collapse: collapse;
+  }
+
+  td {
+    cursor: text;
+  }
+
+  .richtext_editor {
+    font-size: 14px;
+    min-height: 21px;
+  }
 }
 
 .text_box_holder {
@@ -190,27 +206,21 @@ a.action:hover {
   overflow-wrap: break-word;
   word-wrap: break-word;
   word-break: break-word;
-  -webkit-animation-name: fadeIn;
-  animation-name: fadeIn;
-  -webkit-animation-duration: 80ms;
-  animation-duration: 80ms;
 }
 
-textarea, .text_box, .input_due_date, .richtext_editor {
+textarea,
+.text_box,
+.input_due_date,
+.richtext_editor {
   resize: none;
   padding: 6px 6px 0 6px;
   outline: 0;
   min-height: 20px;
 }
 
-.text_box, .richtext_editor {
-  border: 0;
-  width: 95%;
-  padding: 0 6px;
-  padding-top: 4px;
-}
-
-textarea, input, .richtext_editor {
+textarea,
+input,
+.richtext_editor {
   font-family: "Open Sans","Helvetica",Arial,sans-serif;
   font-size: 13px;
 }
@@ -219,6 +229,16 @@ textarea, input, .richtext_editor {
   padding-right: 2px;
   padding-left: 2px;
   text-align: center;
+
+  div {
+    cursor: pointer;
+    margin: 0 4px 4px 6px;
+    opacity: .5;
+  }
+
+  div:first-child {
+    margin-top: -5px !important;
+  }
 }
 
 li.manager {
