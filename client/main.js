@@ -8,11 +8,11 @@ Vue.use(Vuex);
 
 const store = new Vuex.Store({
   state: {
-    currentProject: {}
+    selectedProject: {}
   },
   mutations: {
-    setCurrentProject (state, project) {
-      state.currentProject = project;
+    setSelectedProject (state, project) {
+      state.selectedProject = project;
     }
   }
 })

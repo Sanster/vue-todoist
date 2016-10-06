@@ -11,10 +11,10 @@
         <div class="text_cursor div_due_date">
           <span class="date empty"></span>
         </div>
-        <span class="text sel_item_content">
-          {{text}}
+        <span class="text sel_item_content">{{text}}
           <span class="clickable note_icon note_icon_hidden" data-note-type="item_note" data-note-parent-id="50724437">
             <img src="../../assets/images/icon-src.gif" width="15" height="14" class="cmp_comment clickable sel_item_notes">
+            <span class="clickable note_count sel_note_count">4</span>
           </span>
         </span>
       </td>
@@ -38,7 +38,7 @@ export default {
 </script>
 
 <style lang="sass">
-.checker{
+.checker {
   padding-top: 14px;
   padding-right: 10px;
 }
@@ -60,5 +60,28 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.task_item {
+  td {
+    padding-top: 13px;
+    padding-bottom: 13px;
+  }
+
+  td.menu {
+    padding-top: 15px !important;
+    padding-bottom: 8px !important;
+    border-bottom: 1px solid transparent;
+  }
+
+  .task_content_item {
+    font-size: 14px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .content {
+    max-width: 500px;
+    overflow: hidden;
+  }
 }
 </style>

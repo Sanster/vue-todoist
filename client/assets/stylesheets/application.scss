@@ -42,9 +42,9 @@ table{
   border-collapse: collapse;
 }
 
-td {
-  vertical-align: top;
-}
+// td {
+//   vertical-align: top;
+// }
 
 img {
   border: 0;
@@ -157,12 +157,19 @@ a.action:hover {
 }
 
 .section_header {
-    margin: 0 0 0 0 !important;
-    padding: 0 0 6px 0 !important;
+  margin: 0 0 0 0 !important;
+  padding: 0 0 6px 0 !important;
   
-  &, &a{
+  &,
+  a {
     font-size: 20px !important;
     font-weight: normal;
+  }
+
+  a,
+  .project_link {
+    color: #303333;
+    text-decoration: none !important;
   }
 }
 
@@ -185,6 +192,11 @@ a.action:hover {
     font-size: 14px;
     min-height: 21px;
   }
+}
+
+.content {
+  width: 100%;
+  padding: 0;
 }
 
 .text_box_holder {

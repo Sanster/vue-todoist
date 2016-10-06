@@ -71,3 +71,27 @@ $background-img: '../images/logo-background.png';
   width: 14px;
   height: 14px;
 }
+
+.cmp_comment {
+  background: url($background-img) 0 0 no-repeat;
+  background-size: 197px,2782px;
+  background-position: 0 -204px;
+  width: 15px;
+  height: 13px;
+}
+
+.cmp_share_project_plus {
+  background: url($background-img) 0 0 no-repeat;
+  background-size: 197px,2782px;
+  background-position: 0 -721px;
+  width: 22px;
+  height: 16px;
+}
+
+.cmp_task_actions {
+  background: url($background-img) 0 0 no-repeat;
+  background-size: 197px,2782px;
+  background-position: 0 -689px;
+  width: 26px;
+  height: 16px;
+}

@@ -55,29 +55,40 @@ export default {
           expend: true,
         },
         {
+          title: "Blog",
+          count: 6,
+          indent: 2,
+        },
+        {
           title: "webpack",
+          count: 2,
+          indent: 2,
+        },
+        {
+          title: "零时笔记",
           count: 3,
           indent: 2,
         },
         {
-          title: "sass",
-          count: 8,
-          indent: 2,
-        },
-        {
-          title: "vue2.0",
-          count: 5,
+          title: "工作",
+          count: 3,
           indent: 1,
           expend: true,
         },
         {
-          title: "youtube",
-          count: 5,
+          title: "CodeClub",
+          count: 1,
           indent: 2,
         },
         {
-          title: "todo",
-          count: 5,
+          title: "开源社区",
+          count: 1,
+          indent: 1,
+          expend: true,
+        },
+        {
+          title: "vue-todoist",
+          count: 2,
           indent: 1,
           expend: true,
         }
@@ -119,7 +130,7 @@ export default {
       this.showAddNewProject = true;
     },
     showProject (project) {
-      this.$store.commit('setCurrentProject', project);
+      this.$store.commit('setSelectedProject', project);
     },
   }
 }
