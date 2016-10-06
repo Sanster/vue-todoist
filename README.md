@@ -1,8 +1,15 @@
 # vue-todoist
 
-> A Vue.js project
+# Font-end
+* VueJS-2.0(vuex,vue-router)
+* ES6 
+* sass
 
-## Build Setup
+# Back-end
+* Koa-2.0
+* Mongodb-3.2
+
+# Build Setup
 
 ``` bash
 # install dependencies
@@ -13,6 +20,7 @@ npm run dev
 
 # build for production with minification
 npm run build
-```
 
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+# start app
+npm run start
+```
