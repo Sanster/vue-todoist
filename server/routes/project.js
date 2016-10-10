@@ -1,4 +1,5 @@
-import Project from '../models/project.js'
+import Project from '../models/project.js';
+import Task from '../models/task.js';
 
 export default router => {
   const api = 'api'
@@ -6,6 +7,10 @@ export default router => {
 
   router.get('/', async (ctx, next) =>
     ctx.body = await Project.find());
+
+  router.get('/:id/tasks', async (ctx, next) => {
+    ctx.body = await Task.find({ 'project_id': ctx.params.id })
+  });
 
   router.post('/', async (ctx, next) =>
     ctx.body = await new Project(ctx.request.body).save());

@@ -4,6 +4,7 @@ import Koa from 'koa';
 import logger from 'koa-logger';
 import Router from 'koa-router';
 import serve from 'koa-static';
+// Middleware for accesing json from ctx.request.body
 import parser from 'koa-bodyparser';
 import conditional from 'koa-conditional-get';
 import etag from 'koa-etag';

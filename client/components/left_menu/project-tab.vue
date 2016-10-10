@@ -15,7 +15,7 @@
                 <div class="td_separator" style="width: 2px;"></div>
               </td>
               <td class="name">
-                <span>{{project.title}}</span><div class="counter_count" id="project_count_171109322">{{project.count}}</div>
+                <span>{{project.name}}</span><div class="counter_count" id="project_count_171109322">{{project.count}}</div>
               </td>
               <td class="menu">
                 <div class="icon menu cmp_menu_on gear_menu"></div>
@@ -44,55 +44,19 @@ export default {
   components: {
     NewProject
   },
+  beforeMount: function () {
+    this.$http.get('/api/projects')
+      .then((response) => {
+        console.log(response.body);
+        this.projects = response.body;
+      }, (response) => {
+        console.log(response);
+      });
+  },
   data () {
     return {
       showAddNewProject: false,
-      projects: [
-        {
-          title: "学习",
-          count: 12,
-          indent: 1,
-          expend: true,
-        },
-        {
-          title: "Blog",
-          count: 6,
-          indent: 2,
-        },
-        {
-          title: "webpack",
-          count: 2,
-          indent: 2,
-        },
-        {
-          title: "零时笔记",
-          count: 3,
-          indent: 2,
-        },
-        {
-          title: "工作",
-          count: 3,
-          indent: 1,
-          expend: true,
-        },
-        {
-          title: "CodeClub",
-          count: 1,
-          indent: 2,
-        },
-        {
-          title: "开源社区",
-          count: 1,
-          indent: 1,
-          expend: true,
-        },
-        {
-          title: "vue-todoist",
-          count: 2,
-          indent: 1,
-          expend: true,
-        }
-      ]
+      projects: []
     }
   },
   methods: {
@@ -115,14 +79,18 @@ export default {
       this.showAddNewProject = false;
     },
     createNewProject: function (projectName) {
-      this.projects.push(
-        {
-          title: projectName,
-          count: 0,
-          indent: 1,
-          expend: true,
-        }
-      )
+      let project = {
+        name: projectName,
+      }
+      console.log("createNewProject")
+      this.$http.post('/api/projects', 
+        project).then((response) => {
+          console.log(response);
+          this.projects.push(project)
+        }, (response) => {
+          console.log(response);
+        });
+
 
       this.showAddNewProject = false;
     },

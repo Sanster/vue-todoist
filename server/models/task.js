@@ -10,7 +10,7 @@ var Task = new Schema({},{timestamps: { createdAt: 'created_at', updatedAt: 'upd
 Task.add({
   content: String,
   finished: { type: Boolean, default: false },
-  project_id: ObjectId,
+  project_id: { type: ObjectId, index: true },
   due_date: Date,
   priority: Number,
   labels: [ObjectId]

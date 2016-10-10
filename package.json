@@ -7,7 +7,7 @@
     "index": "cp ./client/index.html ./public",
     "dev": "npm run index && cross-env NODE_ENV=development webpack-dev-server --inline --hot --content-base public/",
     "build": "npm run index && cross-env NODE_ENV=production webpack --progress --hide-modules",
-    "start": "npm run build && node --harmony app.js"
+    "start": "node --harmony app.js"
   },
   "dependencies": {
     "babel-plugin-transform-async-to-generator": "^6.16.0",
@@ -24,6 +24,7 @@
     "koa-static": "^3.0.0",
     "mongoose": "^4.6.3",
     "vue": "^2.0.0",
+    "vue-resource": "^1.0.3",
     "vue-router": "^2.0.0",
     "vuex": "^2.0.0"
   },
