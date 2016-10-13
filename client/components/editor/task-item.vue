@@ -11,7 +11,7 @@
         <div class="text_cursor div_due_date">
           <span class="date empty"></span>
         </div>
-        <span class="text sel_item_content">{{text}}
+        <span class="text sel_item_content">{{task.content}}
           <span class="clickable note_icon note_icon_hidden" data-note-type="item_note" data-note-parent-id="50724437">
             <img src="../../assets/images/icon-src.gif" width="15" height="14" class="cmp_comment clickable sel_item_notes">
             <span class="clickable note_count sel_note_count">4</span>
@@ -28,7 +28,7 @@
 
 <script>
 export default {
-  props: ['text'],
+  props: ['task'],
   data () {
     return {
       msg: 'Hello Vue 2.0!'

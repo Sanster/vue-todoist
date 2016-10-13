@@ -4,7 +4,7 @@
       <div class="list_editor">
         <h2 class="project_header section_header" v-on:mouseover="mouseOver($event)">
           <a href="#" class="project_link"> 
-            <span> {{selectedProject.title}} </span>
+            <span> {{selectedProject.name}} </span>
           </a>
           <div class="right_task_actions">
             <span class="clickable note_icon" data-note-type="project_note">
@@ -19,10 +19,19 @@
           </div>
         </h2>
         <ul class="items">
-          <li class="task_item menu_clickable" v-for="item in taskItems">
-            <task-item :text="item"></task-item>
+          <li class="task_item menu_clickable" v-for="task in tasks">
+            <task-item :task="task"></task-item>
           </li>
+          <new-task v-if="showAddNewTask" v-on:cancel="cancel" v-on:createNewTask="createNewTask"></new-task>
         </ul>
+
+      </div>
+      <div class="controller actions pe_controller">
+        <a  href="#" class="action"
+            @click.prevent="showAddTask" 
+            v-show="!showAddNewTask">
+            <span class="icon icon-add"></span>添加任务
+        </a>
       </div>
     </div>
   </div>
@@ -30,19 +39,18 @@
 
 <script>
 import TaskItem from "./task-item.vue"
+import NewTask from "./new-task.vue"
 
 export default {
   data () {
     return {
-      taskItems: [
-        "推动 2012 在上海、成都、杭州部署包管理服务器",
-        "update redis when rename user name 后面从 codeclub-8.10 merge过去",
-        "处理 iSource 和 CodeClub 重复项目"
+      tasks: [
       ],
-      title: 'Hello Vue 2.0!'
+      showAddNewTask: false
     }
   },
   components: {
+    NewTask,
     TaskItem
   },
   computed: {
@@ -51,9 +59,31 @@ export default {
     }
   },
   methods: {
-    mouseOver (event) {
+    mouseOver(event) {
       console.log("mouseOver");
       event.target.classList.add("current_editor");
+    },
+    showAddTask() {
+      this.showAddNewTask = true;
+    },
+    cancel() {
+      this.showAddNewTask = false;
+    },
+    createNewTask(taskContent) {
+      let task = {
+        content: taskContent,
+        project_id: this.$store.state.selectedProject._id
+      }
+      
+      this.$http.post('/api/tasks', task)
+        .then((response) => {
+          console.log(response);
+          this.tasks.push(task)
+        }, (response) => {
+          console.log(response);
+        });
+
+      this.showAddNewTask = false;
     }
   }
 }
@@ -76,6 +106,10 @@ $editor-width: 596px;
 
   .gear_menu {
     visibility: hidden;
+  }
+  
+  .controller {
+    padding: 9px 0 0 3px;
   }
 }
 
