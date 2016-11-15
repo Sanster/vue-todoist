@@ -26,7 +26,12 @@
     "vue": "^2.0.0",
     "vue-resource": "^1.0.3",
     "vue-router": "^2.0.0",
-    "vuex": "^2.0.0"
+    "vuex": "^2.0.0",
+    test,
+    test
+    test,
+    test,
+    test
   },
   "devDependencies": {
     "babel-core": "^6.0.0",
